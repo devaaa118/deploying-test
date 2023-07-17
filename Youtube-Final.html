@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Devaaa's Youtube </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+       <link rel="stylesheet" type="text/css"  href="css/video.css">
+       <style>
+        
+p{
+ font-family: roboto;
+ margin: 0px;
+} 
+
+.search{
+ display: flex;
+ flex: 1;
+ height: 36px;
+ width: 0px;
+ border-color: rgb(186, 185, 185);
+ border-width: 0.5px;
+ border-radius: 1px;
+ box-shadow: inset 1px 2px 2px rgb(0, 0, 0) 0.05;
+ border-style: solid;
+}
+.search::placeholder{
+ font-size: 15px;
+ padding: 10px;
+ display: block;
+ margin-bottom: 10px;
+ font-family: roboto,arial;
+}
+.tnail{
+ width:100%; 
+ }
+ 
+.bottompic{
+     width: 40px;
+     height: 40px;
+     border-radius : 100%;
+
+
+ }
+ .tnail{
+ vertical-align:top;
+ }
+ .text{
+     vertical-align: top;
+ }
+
+
+ 
+p{
+    text-decoration: none;
+}
+ .name{
+     width: 225px;
+     margin-bottom: 10px;
+     display: block;
+ font-size: 14px;
+color:black;
+ text-decoration: none;
+}
+ .channel{
+     font-size: 12px ;
+     color: rgb(96, 96, 96);
+ }
+ .views{
+     font-weight:525;
+     font-size: 12px;
+ }
+ 
+ 
+ .bottomgrid{
+     display: grid; 
+     grid-template-columns: 50px 1fr;
+     margin-top: 10px;
+ }
+ .wholegrid{
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr ;
+     vertical-align: top;
+     row-gap: 20px;
+     column-gap: 10px;
+     text-decoration: none;
+
+ }
+ .body{
+     margin: 0;
+ }
+ .header{
+ height: 50px;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ padding-right: 24px;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+background-color: white; 
+ border-bottom-width:1px ;
+border-bottom-color:rgb(197, 196, 196) ;
+border-bottom-style:solid;
+z-index: 1;}
+ .left{
+     width: 150px;
+     display: flex; 
+     align-items: center;         
+     
+ }
+ .middle{
+     margin-left: 70px;
+     margin-right: 30px;
+     max-width:500px; 
+     display: flex;
+     flex-direction: row;
+     flex: 1;
+     align-items: center;
+     vertical-align: top;
+ }
+ .right{
+     width:182px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     flex-shrink: 0;
+     margin-left: 29px;
+     margin-right: 24px;
+ }
+ .threelines{
+     height: 20px;
+     margin-left: 20px;
+     margin-right:15px;
+ }
+ .toplogo{
+     height: 20px;
+     margin-left: 10px;
+     margin-right:20px;
+ }
+.searchlogo{
+ height: 25px;
+ margin-top: 3px;
+ padding-top: -1px;
+
+
+}
+.voicesearch{
+ height: 24px;
+
+}
+.searchbutton{
+ width: 66px;
+ height: 39.5px;
+ background-color: rgb(245, 245, 240);
+ border-color:rgb(186, 186, 186);
+ border-width: 0.45px;
+ margin-left: -1px;
+ vertical-align: top;
+ border-radius: 1px;
+ border-style: solid;
+ border-top-width: 0.7;
+ position: relative;
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.vsbutton{
+ margin-left: 10px;
+ border-radius: 100%;
+ height: 40px;
+ width: 40px;
+ border-style: solid;
+ border: none;
+ background-color: rgb(247, 244, 244);
+ position: relative;
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.upload,.options,.bell{
+ height: 24px;
+
+}
+.dp{
+ height: 32px;
+ width: 32px;
+ border-radius: 16px;
+}
+.sbpic{
+ height: 24px;
+ width: 24px;
+}
+.prompt{
+ font-size: 10px;
+ font-family: roboto,arial;
+ margin-top: 5px;
+}
+.sidebar{
+ position: fixed;
+ top: 50px;
+ left: 0;
+ bottom: 0;
+ background-color: white;
+ width: 72px;
+ padding-top: 10px;
+ z-index: 2;
+}
+.sbdiv{
+ margin-bottom: 1px;
+ height: 75px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ }
+ .sbdiv:hover{
+     background-color: rgb(239, 239, 239);
+     cursor: pointer;
+ }
+.tnaildiv{
+ position: relative;
+}
+.time{
+ position: absolute;
+ font-family: roboto,arial;
+ font-size: 12px;
+ font-weight: 500;
+ padding: 4px;
+ padding-top:2px ;
+ padding-bottom: 2px;
+ border-radius: 2px;
+ bottom: 8px;
+ right: 5px;
+ background-color: black;
+ color: white;
+}
+.belldiv{
+ position: relative;
+}
+.noti{
+ position: absolute;
+ top: -3px;
+ right: -5px;
+ background-color: rgb(221, 3, 3);
+ font-size: 11px;
+ padding: 5px;
+ padding-top:2px ;
+ padding-bottom: 2px;
+ border-radius: 100%;
+ color: white;
+
+}
+.searchbutton .tooltip{
+ color: white;
+ background-color: rgb(164, 162, 162);
+ padding: 4px;
+ padding-top: 2px;
+ padding-bottom: 2px;
+ border-radius: 2px;
+ position: absolute;
+ bottom: -30px;
+ right: 2px;
+ opacity: 0;
+ transition: opacity 0.15s;
+ pointer-events: none;
+ 
+}
+.searchbutton:hover .tooltip{
+ opacity: 1;
+
+
+}
+.vsbutton .tooltip,.uploaddiv .tooltip,.appdiv .tooltip,.belldiv .tooltip{
+ color: white;
+ background-color: rgb(164, 162, 162);
+ white-space: nowrap;
+ padding: 4px;
+ padding-top: 2px;
+ padding-bottom: 2px;
+ border-radius: 2px;
+ position: absolute;
+ bottom: -30px;
+ right: -15px;
+ opacity: 0;
+ transition: opacity 0.15s;
+ pointer-events: none;
+ position: absolute;
+ font-family: roboto,arial;
+ 
+}
+.vsbutton:hover .tooltip,.uploaddiv:hover .tooltip,.appdiv:hover .tooltip,.belldiv:hover .tooltip{
+ opacity: 1;
+}
+.uploaddiv,.appdiv,.belldiv{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+}
+.uploaddiv .tooltip,.appdiv .tooltip,.belldiv .tooltip{
+ color: white;
+ background-color: rgb(164, 162, 162);
+ white-space: nowrap;
+ padding: 4px;
+ padding-top: 2px;
+ padding-bottom: 2px;
+ border-radius: 2px;
+ position: absolute;
+ bottom: -30px;
+ right: -15px;
+ opacity: 0;
+ transition: opacity 0.15s;
+ pointer-events: none;
+ position: absolute;
+ font-family: roboto,arial;
+ font-size: 12px;
+ 
+}
+
+
+
+@media (max-width: 1000px){
+    .wholegrid {
+        grid-template-columns: 1fr;
+    }
+    .text p{
+        font-size: 11px;
+    }
+}
+@media (max-width: 600px){
+    .wholegrid {
+        grid-template-columns: 1fr;
+    }
+} 
+
+.namelink{
+    text-decoration: none;
+}
+
+
+       </style>
+    </head>
+
+    <body style="padding-top: 70px;
+    padding-left:90px ;
+    padding-right:24px ;
+    background-color:rgb(248, 248, 248);">
+        <div class="header">
+            <div class="left">
+                <img class=threelines src="	https://supersimple.dev/public/img/exercises/youtube/icons/hamburger-menu.svg">
+                <img class=toplogo src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-logo.svg">
+            </div>
+            <div class="middle">
+                <input class=search type="text" placeholder="Search">
+                <button class="searchbutton"><img class=searchlogo src="	https://supersimple.dev/public/img/exercises/youtube/icons/search.svg" >
+                <div class="tooltip"> search </div></button>
+                <button class="vsbutton"><img class=voicesearch src="https://supersimple.dev/public/img/exercises/youtube/icons/voice-search-icon.svg" >
+                    <div class="tooltip">Voice search </div></button> 
+        </div>
+            <div class="right">
+            <div class="uploaddiv">
+                <img class="upload" src="	https://supersimple.dev/public/img/exercises/youtube/icons/upload.svg">
+                <div class="tooltip"> Create </div></button>
+            </div>
+           <div class="appdiv">
+             <img class="options" src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-apps.svg">
+             <div class="tooltip">Youtube Apps</div>
+             </div>
+
+           <div class="belldiv">
+            <img class="bell" src="	https://supersimple.dev/public/img/exercises/youtube/icons/notifications.svg">
+            <div class="tooltip"> Notifications </div>
+            <div class="noti">7</div>
+           </div> 
+            <img class="dp" src="images/Screenshot (177).png">    
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sbdiv">
+                <img class="sbpic" src="	https://supersimple.dev/public/img/exercises/youtube/icons/home.svg">
+                <p class="prompt">Home</p>
+            </div>
+            <div class="sbdiv">
+                <img class="sbpic" src="	https://supersimple.dev/public/img/exercises/youtube/icons/explore.svg">
+            <p class="prompt">Explore</p>
+            </div>
+            <div class="sbdiv">
+                <img class="sbpic" src="	https://supersimple.dev/public/img/exercises/youtube/icons/subscriptions.svg
+                ">
+                <p class="prompt">Subscriptions</p>
+                
+            </div>
+            <div class="sbdiv">
+                <img class="sbpic" src="	https://supersimple.dev/public/img/exercises/youtube/icons/originals.svg">
+                <p class="prompt">Originals</p>
+            </div>
+            <div class="sbdiv">
+                <img class="sbpic" src="	https://supersimple.dev/public/img/exercises/youtube/icons/originals.svg">
+            <p class="prompt">Youtube Music</p>
+            </div>
+            <div class="sbdiv">
+                <img class="sbpic" src="https://supersimple.dev/public/img/exercises/youtube/icons/library.svg">
+                <p class="prompt">Library</p>
+
+            </div>
+           </div> 
+       <div class="wholegrid">
+       
+       
+        <div class="video">
+        <div class="tnaildiv">
+           <a href="https://youtu.be/ZalJQs4odMU"> <img class=tnail src="	https://i.ytimg.com/vi/-1ADr0T6FDY/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLAskQwlDSVHMiFluX2TvyjIndJ2-w"></a>
+            <div class="time">3:32</div>
+        </div>   
+         <div class="bottomgrid"> 
+        <div class="picdiv">
+                <img class="bottompic" src="images/Screenshot (116).png" >
+            </div>    
+        <div class="text">
+            <a class="namelink" href="https://youtu.be/ZalJQs4odMU"> <p class="name"> <strong> Friends: Chandler And Monica's Proposal (Season 6 Clip) </strong> </p></a>
+                <p class="channel">FRIENDS TV </p>
+                <p class="views">1M views 2 months ago</p> 
+            </div>
+    
+        </div>
+         </div>
+       
+        
+        
+        
+         <div class="video">
+           <div class="tnaildiv">
+            <a href="https://youtu.be/rQvIR1oL1vE"> <img class="tnail" src="https://i.ytimg.com/vi/rQvIR1oL1vE/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLBucvu8umia9MLmYNkBKqfrAo5Mew"></a>
+            <div class="time">0:54</div>
+           </div>
+        <div class="bottomgrid">
+            <div class="picdiv">
+                <img class="bottompic" src="images/Screenshot (12).png">
+            </div>
+            <div class="text">
+           <a class="namelink" href="https://youtu.be/rQvIR1oL1vE"> <p class="name"><strong>BOJACK CHAD HORSEMAN THEME</strong> </p></a>
+           <p class="channel">NETFLIX</p>
+           <p class="views">999M views 6 months ago</p>
+            </div>
+        </div>
+     </div>
+
+     <div class="video">
+        <div class="tnaildiv">
+           <a href="https://youtu.be/j5-yKhDd64s"><img class="tnail" src="https://i.ytimg.com/vi/1wYNFfgrXTI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCp3_3BGi1SjEEMhPMQSjA7UkGgtg"> </a>
+            <div class="time">4:19</div>
+        </div>
+        <div class="bottomgrid">
+            <div class="picdiv">
+                <img class="bottompic" src="https://yt3.ggpht.com/ytc/AOPolaTb668hpGbR3JwaF2I4GZrGG5ep-9BjPGntwrwivA=s88-c-k-c0x00ffffff-no-rj">
+            </div>
+        <div class="text">
+          <a class="namelink" href="https://youtu.be/j5-yKhDd64s">  <p class="name"><strong>NOT-AFRAID EMINEM</strong> </p></a>
+           <p class="channel">Eminem music</p>
+           <p class="views">968M views 14 years ago</p>
+            </div>
+        </div>
+     </div>
+       
+     <div class="video">
+            <div class="tnaildiv">
+               <a href="https://youtu.be/K7JlaKMRccI"> <img class="tnail" src="https://i.ytimg.com/vi/K7JlaKMRccI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnUwF38XUqSfkm7xrlp3QedYR3sg"> </a>
+                <div class="time">5:17</div>
+            </div>
+            <div class="bottomgrid">
+                <div class="picdiv">
+                    <img class="bottompic" src="https://yt3.ggpht.com/fRTh6Q0FUUZ50HFjtiUw_5DeDhQy87dhpUOdLzPySHsZXipNu3lpD4R9oxyKUzXY_DDUVPZB=s68-c-k-c0x00ffffff-no-rj">
+                </div>
+            <div class="text">
+              <a class="namelink" href="https://youtu.be/K7JlaKMRccI">  <p class="name"><strong>Steven Smith makes 144 on comeback</strong> </p> </a>
+               <p class="channel">England cricket board</p>
+               <p class="views">9.9M views 4 years ago</p>
+                </div>
+            </div>
+     </div>
+
+            <div class="video">
+                <div class="tnaildiv">
+                    <a href="https://youtu.be/BYVZh5kqaFg"><img class="tnail" src="https://i.ytimg.com/vi/BYVZh5kqaFg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcOiqiu9uNeEErnZCsSo-pWq9yUA"></a>
+                    <div class="time">26:57</div>    
+                </div>
+                <div class="bottomgrid">
+                    <div class="picdiv">
+                        <img class="bottompic" src="https://yt3.ggpht.com/ytc/AOPolaTxRHy5TOlM0HXSzKkuOFmyRURjjYEUG3N8BL2P=s68-c-k-c0x00ffffff-no-rj">
+                    </div>
+                <div class="text">
+                   <a class="namelink" href="https://youtu.be/BYVZh5kqaFg"> <p class="name"><strong>Egg drop from space</strong> </p></a>
+                   <p class="channel">Mark Rober</p>
+                   <p class="views">41M views 7 months ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video">
+                <div class="tnaildiv">
+                   <a href="https://youtu.be/_WCvTbzjA5g"> <img class="tnail" src="https://i.ytimg.com/vi/_WCvTbzjA5g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCAM7Sp6uFYawwUcBbFFQrrGN5qJg"></a> 
+                    <div class="time">4:13</div>
+                </div>
+                <div class="bottomgrid">
+                    <div class="picdiv">
+                        <img class="bottompic" src="https://yt3.ggpht.com/ytc/AOPolaTYNlLM9mnfIzr72HdUheGARN8qCXbdwf4Jlb6RsA=s68-c-k-c0x00ffffff-no-rj">
+                    </div>
+                <div class="text">
+                 <a class="namelink" href="https://youtu.be/_WCvTbzjA5g">   <p class="name"><strong>Programmer roasts white hat jr</strong> </p></a>
+                   <p class="channel">Samuel miller</p>
+                   <p class="views">1M views 2 years ago</p>
+                    </div>
+                </div>
+
+    
+
+     </div>
+
+
+
+        </div>
+    </body>
+</html>
